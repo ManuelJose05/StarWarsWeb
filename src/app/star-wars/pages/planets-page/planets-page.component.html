@@ -1,0 +1,7 @@
+<app-planet-table [planetas]="planetas"></app-planet-table>
+@if (planetas.length > 0) {
+    @if (numPagePlaneta < 6) {<button class="btn btn-warning" style="margin-left: 25px;" (click)="getNextPlanets()">Buscar más planetas</button>}
+    @if (planetas.length == 60) {<div class="alert alert-warning text-center" role="alert">
+        Ya no hay más planetas
+      </div>}
+}

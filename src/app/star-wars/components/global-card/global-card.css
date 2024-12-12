@@ -1,0 +1,53 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Star Wars space black */
+    background-image: url('https://wallpapers.com/images/featured/star-wars-plzcoaffexgf4h81.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(20, 20, 20, 0.9); /* Semi-transparent dark background */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #fff; /* White text for Star Wars feel */
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    backdrop-filter: blur(10px); /* Add a blurred effect for the card */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  }
+  
+  .card-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    color: #feda4a; /* Classic Star Wars yellow */
+  }
+  
+  .card-content p {
+    font-size: 1.2rem;
+    margin: 20px 0 0;
+    color: #ddd; /* Softer text color for readability */
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      padding: 40px;
+    }
+  
+    .card-header h1 {
+      font-size: 3.5rem;
+    }
+  
+    .card-content p {
+      font-size: 1.5rem;
+    }
+  }
+  

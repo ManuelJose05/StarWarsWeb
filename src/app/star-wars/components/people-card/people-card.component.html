@@ -1,0 +1,22 @@
+@if (characters) {
+    <div class="d-flex flex-wrap col-10" style="margin-top: 25px;">
+      @for (character of characters; track $index) {
+        <div class="card" style="width: 18rem; margin: 8px;">
+          @if (gifList!.length > 0) {
+            <img src="{{gifList![$index].images.downsized_medium.url}}" class="card-img-top" alt="gif" width="100" height="225"/>
+          }
+          <div class="card-body">
+            <h5 class="card-title text-center">{{character.name | titlecase}}</h5>
+          </div>
+          <ul class="list-group list-group-light list-group-small">
+            <li class="list-group-item px-4"><b>Altura:</b> {{character.height}}</li>
+            <li class="list-group-item px-4"><b>Peso:</b> {{character.mass}}</li>
+            <li class="list-group-item px-4"><b>Género:</b> {{character.gender}}</li>
+          </ul>
+        </div>
+  }
+    </div>
+} @else {
+  <h3>Buscando personajes...</h3>
+  <app-snipper-loading></app-snipper-loading>
+}

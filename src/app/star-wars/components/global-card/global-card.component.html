@@ -1,0 +1,45 @@
+@if (personaje) {
+  <div class="card-container">
+    <div class="card">
+      <div class="card-header">
+        <h1>
+          {{ personaje.name }}
+        </h1>
+      </div>
+      <div class="card-content">
+        <p>
+          Género: {{ personaje.gender | titlecase }}
+        </p>
+        <p>Año de nacimiento: {{ personaje.birth_year| titlecase }}
+        </p>
+        <p>Altura: {{ personaje.height| titlecase }}
+        </p>
+      </div>
+    </div>
+  </div> 
+}
+
+@if (planeta) {
+  <div class="card-container">
+    <div class="card">
+      <div class="card-header">
+        <h1>
+          {{ planeta.name }}
+        </h1>
+      </div>
+      <div class="card-content">
+        <p>
+          Población: {{ planeta.population == 'unknown' ? 'Población desconocida' : planeta.population | number }}
+       </p>
+        <p>
+          Clima: {{ planeta.climate | titlecase }}  
+        </p>
+        <p>
+          Gravedad: {{ planeta.gravity | titlecase}}
+        </p>
+        <p>
+          Terreno: {{ planeta.terrain | titlecase}}</p>
+      </div>
+    </div>
+  </div> 
+}
